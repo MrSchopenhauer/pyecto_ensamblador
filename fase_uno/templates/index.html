@@ -2,14 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto fase uno</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proyecto fase uno</title>
 </head>
 <body>
-    <h1>Proyecto fase uno</h1>
-    <script src="{{ url_for('static', filename='javascript.js')}}"></script>
+	<div class="background"> 
+		<h1 class="title">Proyecto fase uno</h1>
+	</div>
+	<input type="file" id="archivo" required><br><br>			
+	<div class="contenedor-button">
+		<button onclick="obtener()">Obtener</button>
+		<button onclick="separar()">Separar</button>
+	</div>
+	<div class="contenedor">
+		<textarea class="displayer" name="displayer" rows="50" cols="40"></textarea>
+		<textarea class="displayer" name="shower" rows="50" cols="40"></textarea>
+	</div> 
+	<script src="{{ url_for('static', filename='javascript.js')}}"></script>
 </body>
 </html>
 
